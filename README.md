@@ -100,14 +100,14 @@ You need to copy the source code of the API in the container at the root "/" pat
 
 The API is using FLASK engine,  you need to install some package 
 ```bash
-apt update -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
+apt update -y && apt install -y python3 python3-pip python3-dev libsasl2-dev libldap2-dev libssl-dev
 ```
 Copy the requirements.txt file into the container in the root "/" directory to install the packages needed to start up our application
 
 to launch the installation, use this command
 
 ```bash
-pip3 install -r /requirements.txt
+pip3 install --no-cache-dir -r requirements.txt
 ```
 - Persistent data (volume)
 
